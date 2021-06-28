@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition Photos</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <style>
+        .slider-frame {
+            overflow: hidden;
+            height: 600px;
+            width: 1200px;
+            margin-left: 60px;
+            margin-top: 20px;
+            background-size: cover;
+        }
+
+       @-webkit-keyframes slide_animation {
+           0% {
+               left: 0px;
+           }
+           10% {
+               left: 0px;
+           }
+           20% {
+               left: 1200px;
+           }
+           30% {
+               left: 1200px;
+           }
+           40% {
+               left: 2400px;
+           }
+           50% {
+               left: 2400px;
+           }
+           60% {
+               left: 1200px;
+           }
+           70% {
+               left: 1200px;
+           }
+           80% {
+               left: 0px;
+           }
+           90% {
+                left: 0px;
+            }
+           100% {
+               left: 0px;
+           }
+       }
+        .slide-image {
+            width: 3600px;
+            height: 600px;
+            margin: 0 0 0 -2400px;
+            position: relative;
+            animation-name: slide_animation;
+            animation-duration: 30s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-play-state: running;
+            justify-content: center;
+            background-size: cover;
+        }
+        .img-contain {
+            height: 600px;
+            width: 1200px;
+            position: relative;
+            float: left;
+
+        }
+        .img-contain img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="slider-frame">
+    <div class="slide-image">
+        <div class="img-contain">
+            <img src="assets/img/lock2.png" alt="">
+        </div>
+        <div class="img-contain">
+            <img src="assets/img/mikael-gustafsson-wallpaper-mikael-gustafsson.jpg" alt="">
+        </div>
+
+        <div class="img-contain">
+            <img src="assets/img/wp1828907-programmer-wallpapers.png" alt="">
+        </div>
+        <div class="img-contain">
+            <img src="assets/img/spying-4270361_1920.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>

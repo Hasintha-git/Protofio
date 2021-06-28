@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Animation</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <style>
+        section {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+
+        }
+        section::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 100%;
+
+            border: 16px solid gray;
+            border-top: 16px solid crimson;
+            animation: Rotatec 5s linear infinite;
+            transform: rotate(43deg);
+
+        }
+        section > div {
+            width: 50%;
+            height: 16px;
+            background: crimson;
+            position: absolute;
+            right: 0;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            transform-origin: left;
+
+            animation: RotateHand 5s linear infinite;
+
+        }
+        section >div::before {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            background: crimson;
+            right: -2px;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+        }
+        @keyframes Rotatec {
+            from {
+                transform: rotate(43deg);
+            }
+            to {
+                transform: rotate(403deg);
+            }
+        }
+        @keyframes RotateHand {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+</section>
+</body>
+</html>
